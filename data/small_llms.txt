@@ -1,0 +1,3 @@
+Small language models (SLMs) have fewer parameters than large models, usually between 0.1 and 4 billion. Examples include Qwen2.5-0.5B-Instruct, TinyLlama-1.1B and Phi-3-mini. They can run on a laptop CPU, need little memory, respond quickly, and are cheap to deploy. The trade-off is weaker reasoning and less world knowledge, which is why pairing them with RAG works well: retrieval supplies the facts and the small model only needs to read and summarize them.
+
+FAISS is a library from Meta for efficient similarity search over dense vectors. IndexFlatIP performs exact inner-product search, which equals cosine similarity when vectors are normalized. For millions of vectors, approximate indexes such as IVF or HNSW are used instead.
